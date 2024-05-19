@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Title and scripts used to display the drag equation and show/hide tutorials-->
+<head>
+	<title>Home Page</title>
+	<link rel="stylesheet" type="text/css" href="Scripts/Styles.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css">
+	<script src="Scripts/jquery-1.10.2.min.js"></script>
+	<script src="Scripts/DisplayText.js" onload="PageReady();"></script>
+	<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+	<script>
+		function showRagdoll() {
+			document.getElementById("Ragdoll").style.display = "block";
+			document.getElementById("Cloth").style.display = "none";
+			document.getElementById("Save").style.display = "none";
+		}
+		function showCloth() {
+			document.getElementById("Ragdoll").style.display = "none";
+			document.getElementById("Cloth").style.display = "block";
+			document.getElementById("Save").style.display = "none";
+		}
+		function showSave() {
+			document.getElementById("Ragdoll").style.display = "none";
+			document.getElementById("Cloth").style.display = "none";
+			document.getElementById("Save").style.display = "block";
+		}
+	</script>
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <header>
+        <h1><a href="Home.html" id="PageTitle">George Fyles Portfolio.... </a><span id="cursor">|</span></h1>
+    </header>
+
+    <!-- Contact Bar -->
+    <div class="contact">
+        <p style="display:inline-block; margin-top:0px; vertical-align:middle">Contact:</p>
+        <a href="https://www.linkedin.com/in/george-fyles-b72b45200"><img src="Images/linkedin.png" style="height: 20px; margin-top:0; vertical-align:middle;" alt="Linkedin" title="View my Linkedin profile"></a>
+        <a style="display: inline-block; margin-top: 0px; vertical-align: middle; text-decoration: none" href="mailto:gffyles@gmail.com">gffyles@gmail.com<img src="Images/mail.png" style="height: 20px; margin-top:0; margin-left: 5px; vertical-align:middle;" alt=""></a>
+    </div>
+
+    <!-- The main content of the page -->
+    <main style="height: auto;">
+
+        <div style="margin: 10px 50px 10px 50px;">
+            <h2><u>Physics Engine Project - Intro</u></h2>
+
+            <!-- Navigation Bar -->
+            <nav>
+                <ul>
+                    <li><a href="PhysicsHome.html" class="physicsNav">Intro</a></li>
+                    <li><a href="Ragdoll.html" class="physicsNav">Ragdoll Demo</a></li>
+                    <li><a href="Cloth.html" class="physicsNav">Cloth Demo</a></li>
+                </ul>
+            </nav>
+
+            <p>
+                The purpose of this project is a demonstration of a physics engine.<br><br>
+                According to Wikipedia, a physics engine is "computer software that provides an approximate simulation of
+                certain physical systems". This means it is a script or collection of scripts which through various different
+                methods can simulate how objects (and sometimes fluids) move around and interact with their environment in real-time.
+                Physics engines are usually used in video games and other animated media as they make things appear more realistic than using “pre-baked” animations,
+                however they also have scientific applications.<br><br>
+                This project uses a numerical method first developed in 1791 called <b>Verlet integration</b>, which is used to
+                integrate Newton’s equations of motion to calculate trajectories of particles. It was first used in a video game
+                by IO Interactive in <i>Hitman: Codename 47</i>, released on 19th November 2000. I myself have implemented the basic algorithm and
+                further built upon it to make the simulation more precise/accurate.<br><br>
+                It works by finding where a particle was in the last frame and how far it moved to get there. From this it works out the particles current
+                velocity and then moves the particle accordingly. Once this is done, it again changes where the particle is by moving it down a bit for gravity,
+                back the direction it came for air resistance based on the drag equation \(F_D=\frac{1}{2}\rho{v^2}C_DA\), and when on the floor, the particle is moved backwards
+                to slow it down due to friction.<br><br>
+                To keep a line between two points rigid, once both points have updated the distance between them is calculated. This distance is then compared with how far apart
+                they <b>should</b> be and the points are moved towards each other until they are the correct distance apart.<br><br>
+            </p>
+
+            <h2><u>Tutorials</u></h2>
+            <p>Click below to see tutorials:</p>
+
+            <div id="tutNav" style="width: 50%; margin: 0px auto; height: 30px;">
+                <ul>
+                    <li onclick="showRagdoll();"><label>Ragdoll Demo</label></li>
+                    <li onclick="showCloth();"><label>Cloth Demo</label></li>
+                    <li onclick="showSave();"><label>Save System</label></li>
+                </ul>
+            </div>
+
+            <section id="Ragdoll" style="display: none;">
+                <h3><u>Ragdoll Demo</u></h3>
+                <p>This demo showcases something known as ragdoll physics - "a type of procedural animation used by physics engines, which is often used as a replacement for traditional static death animations in video games and animated films."</p>
+                <p>Beneath the Demo, you will see a <b>Start</b> button, along with various other inputs:</p>
+                <img src="Images/RagdollVariables.PNG" class="variables" style="margin-top: 5px;">
+                <p>
+                    Clicking the start button will begin the simulation. Alternatively you can first select what type of
+                    object you want to simulate and how many of them (you cannot change these during the simulation). All other variables, except for in some
+                    special circumstances are changeable at any point. They do however have minimum and maximum limits.<br><b>Gravity, air density</b> and <b>ground friction</b> are self explanatory (they are all fairly accurate and assume 100px = 1m). There are two options for <b>Material</b>: <b>Rubber</b> makes objects fairly rigid and friction has a large effect,
+                    while <b>Jelly</b> makes objects wobbly (more noticeable on some object types than others) and slippery. <br><br>
+                    Once the simulation has started, the object of your choice will generate:
+                </p>
+                <img src="Images/Shape1.PNG" class="shapeimg">
+                <p>Checking the <b>Show Vertices</b> and <b>Show Constraints</b> boxes will reveal the points making up the object and hidden lines keeping the object rigid:</p>
+                <img src="Images/Shape2.PNG" class="shapeimg">
+                <p>
+                    Now you can play around with your objects by picking them up, dragging them around the screen and throwing them using the mouse! You can't click anywhere on the shape, though - you have to pick it up by the vertices.
+                    Also, you must be scrolled to the top of the page for it to work properly.
+                </p>
+            </section>
+
+            <section id="Cloth" style="display: none;">
+                <h3><u>Cloth Demo</u></h3>
+                <p>This demo shows how things such as cloth/fabrics can be simulated.</p>
+                <p>Beneath the Demo, you will see a <b>Start button</b>, along with two other inputs:</p>
+                <img src="Images/ClothVariables.PNG" class="variables">
+                <p style="margin-top: 0px;">
+                    Clicking the start button will begin the simulation. Alternatively you can first select how many points will make up the cloth
+                    (you cannot change this during the simulation. <b>If your computer is slow it's recommended you select a lower number.</b>):
+                </p>
+                <img src="Images/ClothBig.PNG" class="clothimg">
+                <img src="Images/ClothSmall.PNG" class="clothimg">
+                <p>
+                    Once the simulation has started, cloth like in the images above will generate. You can swish the cloth around with the mouse (you must be scrolled to the top of the page for it to work properly),
+                    and depending on what <b>Tensile Strength</b> you select (you can change this at any time), it may rip apart:
+                </p>
+                <img src="Images/ClothRip.PNG" class="clothimg">
+            </section>
+
+            <section id="Save" style="display: none;">
+                <h3><u>Save System</u></h3>
+                <p>Beneath all simulations, you will see the save system:</p>
+                <img src="Images/SaveSystem.PNG" class="saveimg">
+                <p style="margin-top: 0px;">
+                    If you have set the variables to certain values and want to revisit this configuration later, you can use this to save them (<b>RELOADING THE PAGE WILL WIPE YOUR SAVES</b>).
+                    <br><br>Enter a name for your configuration into the <b>Name configuration</b> box and click <b>Save:</b>
+                </p>
+                <img src="Images/configEnter.PNG" class="saveimg">
+                <p style="margin-top: 0px;">You'll see your configuration is added to the list below the inputs:</p>
+
+                <div style="display: inline-flex;">
+                    <div>
+                        <p style="display: block;">Before:</p>
+                        <img src="Images/list1.PNG" class="listimg">
+                    </div>
+                    <div>
+                        <p style="display: block;">After:</p>
+                        <img src="Images/list2.PNG" class="listimg">
+                    </div>
+                </div>
+                <p style="margin-top: 0px;">
+                    To quickly set all variables to those in a saved configuration
+                    (the Ragdoll Demo comes with the list above pre-saved), simply type its name into the <b>Configuration to Set to</b> box and click <b>Set</b>.
+                </p>
+            </section>
+        </div>
+    </main>
+
+
+</body>
+</html>
