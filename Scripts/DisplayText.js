@@ -1,3 +1,5 @@
+
+
 function HomeReady() {
     var text = 'George Fyles Portfolio.... ';
     type(text);
@@ -16,7 +18,9 @@ function type(text, new_caption_length) {
             type(text, captionLength);
         }, 80);
     }
-    else { setInterval('cursorAnimation()', 700); }
+    else {
+        setInterval('cursorAnimation()', 700);
+    }
 }
 
 function cursorAnimation() {
