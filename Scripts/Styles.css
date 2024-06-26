@@ -40,7 +40,7 @@ main, header, nav, footer, section, .contact{clear: both}
 .subdiv, #cursor, .thumbnailDiv {
     display: inline-block;
 }
-.thumbnailDiv {vertical-align:top}
+.thumbnailDiv {vertical-align:top;}
 
 
 /* Element Sizes */
