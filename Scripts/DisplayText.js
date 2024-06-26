@@ -1,7 +1,7 @@
 
 
 function HomeReady() {
-    var text = 'George Fyles Portfolio.... ';
+    var text = 'George Fyles Portfolio....';
     type(text);
     
 }

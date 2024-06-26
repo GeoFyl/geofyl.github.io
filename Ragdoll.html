@@ -16,7 +16,7 @@
 
 	<!-- Page Header -->
 	<header>
-		<h1><a href="/" id="PageTitle">George Fyles Portfolio.... </a><span id="cursor">|</span></h1>
+		<h1><a href="/" id="PageTitle">George Fyles Portfolio....</a><span id="cursor">|</span></h1>
 	</header>
 
 	<!-- Contact Bar -->
@@ -27,85 +27,87 @@
 	</div>
 
 	<!-- The main content of the page -->
-	<main>
-		<div style="margin: 10px 50px 10px 50px;">
-			<h2><u>Physics Engine Project - Ragdoll</u></h2>
+    <main>
+        <div style="margin: 10px 50px 10px 50px;">
+            <h2><u>Physics Engine Project - Ragdoll</u></h2>
 
-			<!--Navigation Bar-->
-			<nav>
-				<ul>
-					<li><a href="PhysicsHome.html" class="physicsNav">Intro</a></li>
-					<li><a href="Ragdoll.html" class="physicsNav">Ragdoll Demo</a></li>
-					<li><a href="Cloth.html" class="physicsNav">Cloth Demo</a></li>
-				</ul>
-			</nav>
-		</div>
+            <!--Navigation Bar-->
+            <nav>
+                <ul>
+                    <li><a href="PhysicsHome.html" class="physicsNav">Intro</a></li>
+                    <li><a href="Ragdoll.html" class="physicsNav">Ragdoll Demo</a></li>
+                    <li><a href="Cloth.html" class="physicsNav">Cloth Demo</a></li>
+                </ul>
+            </nav>
+        </div>
 
-		<canvas style="height:90%" onmousedown="toggleMouse();" onmouseup="toggleMouse();" onmouseout="mouseDragging = false;" onmousemove="getMouseCoords(event);"></canvas>
-	</main>
+        <canvas style="height:90%" onmousedown="toggleMouse();" onmouseup="toggleMouse();" onmouseout="mouseDragging = false;" onmousemove="getMouseCoords(event);"></canvas>
 
-	<section>
-		<form>
-			<input type="button" id="start" value="Start" onclick="startStop();" style="margin-right: 10px;">
+        <section>
+            <form>
+                <input type="button" id="start" value="Start" onclick="startStop();" style="margin-right: 10px;">
 
-			<div class="subdiv">
-				Number of Objects:
-				<input type="number" id="Number" min="1" max="100" value="1">
-			</div>
-			<div class="subdiv">
-				Gravity(N/kg):
-				<input type="number" id="Gravity" min="0" max="25" value="9.8" step="0.5">
-			</div>
-			<div class="subdiv">
-				Air Density(kg/m<sup>3</sup>):
-				<input type="number" id="Density" min="0" max="5" value="1.2" step="0.1">
-			</div>
-			<div class="subdiv">
-				Ground Friction(N):
-				<input type="number" id="Friction" min="0" max="4" value="1">
-			</div>
-			<div class="subdiv">
-				Object Type:
-				<select id="Type" required onchange="restrictNumber();">
-					<option value="Particles">Particles</option>
-					<option value="Triangle">Triangle</option>
-					<option value="Square">Square</option>
-					<option value="Pentagon">Pentagon</option>
-					<option value="Ragdoll">Ragdoll</option>
-				</select>
-			</div>
-			<div class="subdiv">
-				Material:
-				<select id="Material" required>
-					<option name="Rubber" value="10">Rubber</option>
-					<option name="Jelly" value="1">Jelly</option>
-				</select>
-			</div>
-			<div class="subdiv">
-				Show Vertices:
-				<input type="checkbox" id="vertices" onchange="changeVertexRad();">
-			</div>
-			<div class="subdiv">
-				Show Constraints:
-				<input type="checkbox" id="constraints">
-			</div>
+                <div class="subdiv">
+                    Number of Objects:
+                    <input type="number" id="Number" min="1" max="100" value="1">
+                </div>
+                <div class="subdiv">
+                    Gravity(N/kg):
+                    <input type="number" id="Gravity" min="0" max="25" value="9.8" step="0.5">
+                </div>
+                <div class="subdiv">
+                    Air Density(kg/m<sup>3</sup>):
+                    <input type="number" id="Density" min="0" max="5" value="1.2" step="0.1">
+                </div>
+                <div class="subdiv">
+                    Ground Friction(N):
+                    <input type="number" id="Friction" min="0" max="4" value="1">
+                </div>
+                <div class="subdiv">
+                    Object Type:
+                    <select id="Type" required onchange="restrictNumber();">
+                        <option value="Particles">Particles</option>
+                        <option value="Triangle">Triangle</option>
+                        <option value="Square">Square</option>
+                        <option value="Pentagon">Pentagon</option>
+                        <option value="Ragdoll">Ragdoll</option>
+                    </select>
+                </div>
+                <div class="subdiv">
+                    Material:
+                    <select id="Material" required>
+                        <option name="Rubber" value="10">Rubber</option>
+                        <option name="Jelly" value="1">Jelly</option>
+                    </select>
+                </div>
+                <div class="subdiv">
+                    Show Vertices:
+                    <input type="checkbox" id="vertices" onchange="changeVertexRad();">
+                </div>
+                <div class="subdiv">
+                    Show Constraints:
+                    <input type="checkbox" id="constraints">
+                </div>
 
-			<div style="display: block;">
-				<div class="subdiv">
-					<input type="text" id="saveValue" placeholder="Name Configuration">
-					<input type="button" id="Save" value="Save" onclick="save()">
-				</div>
-				<div class="subdiv">
-					<input type="text" id="setValue" placeholder="Configuration to Set to">
-					<input type="button" id="Set" value="Set" onclick="set()">
-				</div>
+                <div style="display: block;">
+                    <div class="subdiv">
+                        <input type="text" id="saveValue" placeholder="Name Configuration">
+                        <input type="button" id="Save" value="Save" onclick="save()">
+                    </div>
+                    <div class="subdiv">
+                        <input type="text" id="setValue" placeholder="Configuration to Set to">
+                        <input type="button" id="Set" value="Set" onclick="set()">
+                    </div>
 
-			</div>
-		</form>
+                </div>
+            </form>
 
-		Saved Configs:
-		<ul id="list" style="padding-left:35px"></ul>
-	</section>
+            Saved Configs:
+            <ul id="list" style="padding-left:35px"></ul>
+        </section>
+    </main>
+
+
 
 	<!-- Page Footer -->
 	<footer>
