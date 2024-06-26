@@ -3,30 +3,31 @@
 
 <!-- Title and scripts used to display the drag equation and show/hide tutorials-->
 <head>
-	<title>Home Page</title>
-	<link rel="stylesheet" type="text/css" href="Scripts/Styles.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css">
-	<script src="Scripts/jquery-1.10.2.min.js"></script>
-	<script src="Scripts/DisplayText.js" onload="PageReady();"></script>
-	<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script>
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-	<script>
-		function showRagdoll() {
-			document.getElementById("Ragdoll").style.display = "block";
-			document.getElementById("Cloth").style.display = "none";
-			document.getElementById("Save").style.display = "none";
-		}
-		function showCloth() {
-			document.getElementById("Ragdoll").style.display = "none";
-			document.getElementById("Cloth").style.display = "block";
-			document.getElementById("Save").style.display = "none";
-		}
-		function showSave() {
-			document.getElementById("Ragdoll").style.display = "none";
-			document.getElementById("Cloth").style.display = "none";
-			document.getElementById("Save").style.display = "block";
-		}
-	</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="Scripts/Styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css">
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/DisplayText.js" onload="PageReady();"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    <script>
+        function showRagdoll() {
+            document.getElementById("Ragdoll").style.display = "block";
+            document.getElementById("Cloth").style.display = "none";
+            document.getElementById("Save").style.display = "none";
+        }
+        function showCloth() {
+            document.getElementById("Ragdoll").style.display = "none";
+            document.getElementById("Cloth").style.display = "block";
+            document.getElementById("Save").style.display = "none";
+        }
+        function showSave() {
+            document.getElementById("Ragdoll").style.display = "none";
+            document.getElementById("Cloth").style.display = "none";
+            document.getElementById("Save").style.display = "block";
+        }
+    </script>
 </head>
 
 <body>
