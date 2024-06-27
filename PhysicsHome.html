@@ -47,19 +47,21 @@
     <!-- The main content of the page -->
     <main style="height: auto;">
 
-        <div style="margin: 10px 50px 10px 50px;">
+       
             <h2><u>Physics Engine Project - Intro</u></h2>
 
             <!-- Navigation Bar -->
-            <nav>
-                <ul>
-                    <li><a href="PhysicsHome.html" class="physicsNav">Intro</a></li>
-                    <li><a href="Ragdoll.html" class="physicsNav">Ragdoll Demo</a></li>
-                    <li><a href="Cloth.html" class="physicsNav">Cloth Demo</a></li>
-                </ul>
-            </nav>
+            
+                <nav>
+                    <ul>
+                        <li><a href="PhysicsHome.html" class="physicsNav">Intro</a></li>
+                        <li><a href="Ragdoll.html" class="physicsNav">Ragdoll Demo</a></li>
+                        <li><a href="Cloth.html" class="physicsNav">Cloth Demo</a></li>
+                    </ul>
+                </nav>
+            
 
-            <div style="background-color: #4d4d4d; padding-top:10px; padding-left:10px; padding-right:10px">
+            <div style="clear:both; background-color: #4d4d4d; padding-top:10px; padding-left:10px; padding-right:10px">
                 
                     This project was created as coursework for Advanced Higher Computing Science while I was 16-17 years old. I was still learning the basic concepts of OOP and had zero guidance on implementing something like this and as such,
                     the implementation is poor - poor memory and object management, poor decoupling and encapsulation, not to mention inconsistent framerates across machines! I was still happy with the results however and I feel I have a deeper knowledge of the inner workings of
@@ -84,11 +86,11 @@
             <h2><u>Tutorials</u></h2>
             <p>Click below to see tutorials:</p>
 
-            <div id="tutNav" style="width: 50%; margin: 0px auto; height: 30px;">
+            <div id="tutNav" style="height: 50px;">
                 <ul>
-                    <li onclick="showRagdoll();"><label>Ragdoll Demo</label></li>
-                    <li onclick="showCloth();"><label>Cloth Demo</label></li>
-                    <li onclick="showSave();"><label>Save System</label></li>
+                    <li class="physicsNav" onclick="showRagdoll();"><label>Ragdoll Demo</label></li>
+                    <li class="physicsNav" onclick="showCloth();"><label>Cloth Demo</label></li>
+                    <li class="physicsNav" onclick="showSave();"><label>Save System</label></li>
                 </ul>
             </div>
 
@@ -96,7 +98,7 @@
                 <h3><u>Ragdoll Demo</u></h3>
                 <p>This demo showcases something known as ragdoll physics - "a type of procedural animation used by physics engines, which is often used as a replacement for traditional static death animations in video games and animated films."</p>
                 <p>Beneath the Demo, you will see a <b>Start</b> button, along with various other inputs:</p>
-                <img src="Images/RagdollVariables.PNG" class="variables" style="margin-top: 5px;">
+                <img src="Images/RagdollVariables.PNG" class="tutImgLong" style="margin-top: 5px;">
                 <p>
                     Clicking the start button will begin the simulation. Alternatively you can first select what type of
                     object you want to simulate and how many of them (you cannot change these during the simulation). All other variables, except for in some
@@ -104,9 +106,9 @@
                     while <b>Jelly</b> makes objects wobbly (more noticeable on some object types than others) and slippery. <br><br>
                     Once the simulation has started, the object of your choice will generate:
                 </p>
-                <img src="Images/Shape1.PNG" class="shapeimg">
+                <img src="Images/Shape1.PNG" class="tutImg">
                 <p>Checking the <b>Show Vertices</b> and <b>Show Constraints</b> boxes will reveal the points making up the object and hidden lines keeping the object rigid:</p>
-                <img src="Images/Shape2.PNG" class="shapeimg">
+                <img src="Images/Shape2.PNG" class="tutImg">
                 <p>
                     Now you can play around with your objects by picking them up, dragging them around the screen and throwing them using the mouse! You can't click anywhere on the shape, though - you have to pick it up by the vertices.
                     Also, you must be scrolled to the top of the page for it to work properly.
@@ -117,39 +119,39 @@
                 <h3><u>Cloth Demo</u></h3>
                 <p>This demo shows how things such as cloth/fabrics can be simulated.</p>
                 <p>Beneath the Demo, you will see a <b>Start button</b>, along with two other inputs:</p>
-                <img src="Images/ClothVariables.PNG" class="variables">
+                <img src="Images/ClothVariables.PNG" class="tutImgLong">
                 <p style="margin-top: 0px;">
                     Clicking the start button will begin the simulation. Alternatively you can first select how many points will make up the cloth
                     (you cannot change this during the simulation. <b>If your computer is slow it's recommended you select a lower number.</b>):
                 </p>
-                <img src="Images/ClothBig.PNG" class="clothimg">
-                <img src="Images/ClothSmall.PNG" class="clothimg">
+                <img src="Images/ClothBig.PNG" class="tutImg">
+                <img src="Images/ClothSmall.PNG" class="tutImg">
                 <p>
                     Once the simulation has started, cloth like in the images above will generate. You can swish the cloth around with the mouse (you must be scrolled to the top of the page for it to work properly),
                     and depending on what <b>Tensile Strength</b> you select (you can change this at any time), it may rip apart:
                 </p>
-                <img src="Images/ClothRip.PNG" class="clothimg">
+                <img src="Images/ClothRip.PNG" class="tutImg">
             </section>
 
             <section id="Save" style="display: none;">
                 <h3><u>Save System</u></h3>
                 <p>Beneath all simulations, you will see the save system:</p>
-                <img src="Images/SaveSystem.PNG" class="saveimg">
+                <img src="Images/SaveSystem.PNG" class="tutImgLong">
                 <p style="margin-top: 0px;">
                     If you have set the variables to certain values and want to revisit this configuration later, you can use this to save them (<b>RELOADING THE PAGE WILL WIPE YOUR SAVES</b>).
                     <br><br>Enter a name for your configuration into the <b>Name configuration</b> box and click <b>Save:</b>
                 </p>
-                <img src="Images/configEnter.PNG" class="saveimg">
+                <img src="Images/configEnter.PNG" class="tutImgLong">
                 <p style="margin-top: 0px;">You'll see your configuration is added to the list below the inputs:</p>
 
                 <div style="display: inline-flex;">
                     <div>
                         <p style="display: block;">Before:</p>
-                        <img src="Images/list1.PNG" class="listimg">
+                        <img src="Images/list1.PNG" class="tutImgLong">
                     </div>
                     <div>
                         <p style="display: block;">After:</p>
-                        <img src="Images/list2.PNG" class="listimg">
+                        <img src="Images/list2.PNG" class="tutImgLong">
                     </div>
                 </div>
                 <p style="margin-top: 0px;">
@@ -157,7 +159,7 @@
                     (the Ragdoll Demo comes with the list above pre-saved), simply type its name into the <b>Configuration to Set to</b> box and click <b>Set</b>.
                 </p>
             </section>
-        </div>
+       
     </main>
 
     <!-- Page Footer -->

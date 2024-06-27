@@ -16,7 +16,7 @@ p {margin-top: 10px;}
 
 /* Margins */
 body{margin:auto;}
-div, header {margin-bottom: 10px;}
+header{margin-bottom: 10px;}
 main, footer{margin-top: 10px;}
 .subdiv{margin-right: 10px;}
 img {margin-top: 10px;}
@@ -41,7 +41,7 @@ main, header, nav, footer, section, .contact{clear: both}
     display: inline-block;
 }
 .thumbnailDiv {vertical-align:top;}
-
+.physicsNav {display:block}
 
 /* Element Sizes */
 html, body{
@@ -50,20 +50,17 @@ html, body{
 /*main{height: 80%;}*/
 body{width: 90%; max-width: 1600px;}
 header{ height: 50px;}
-nav{ height: 40px}
+
 canvas{width: 100%; height:100%;}
 input[type=number],input[type=button]{width: 50px;}
 select{width: 90px;}
-.shapeimg {width: 30%}
 .thumbnailDiv {
     width: calc(33% - 30px)
 }
-.clothimg {width: 45%}
-.listimg {width: 100%; margin-top: 0px;}
-.variables {width: 70%; margin-top: 0px;}
-.saveimg {width: 50%; margin-top: 0px;}
 .thumbnailImg {width: 100%;}
-
+.tutImgLong {width: 100%; max-width: 700px}
+.tutImg {width: 100%; max-width: 300px}
+.physicsNav {height:100%}
 
 /* Navigation List Properties */
 #PageTitle {text-decoration: none;}
