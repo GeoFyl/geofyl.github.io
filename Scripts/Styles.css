@@ -17,7 +17,7 @@ p {margin-top: 10px;}
 /* Margins */
 body{margin:auto;}
 header{margin-bottom: 10px;}
-main, footer{margin-top: 10px;}
+main, footer, .thumbnailDiv{margin-top: 10px;}
 .subdiv{margin-right: 10px;}
 img {margin-top: 10px;}
 nav ul li a {margin-right: 2px;}
