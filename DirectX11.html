@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Title and scripts used to display the drag equation and show/hide tutorials-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DirectX 11 Showcase</title>
+    <link rel="icon" type="image/x-icon" href="Images/icon.ico">
+    <link rel="stylesheet" type="text/css" href="Scripts/Styles.css">
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/DisplayText.js" onload="PageReady();"></script>
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <header>
+        <h1><a href="/" id="PageTitle">George Fyles Portfolio....</a><span id="cursor">|</span></h1>
+    </header>
+
+    <!-- Contact Bar -->
+    <div class="contact">
+        <p style="display:inline-block; margin-top:0px; vertical-align:middle">Contact:</p>
+        <a href="https://www.linkedin.com/in/george-fyles-b72b45200"><img src="Images/linkedin.png" style="height: 20px; margin-top:0; vertical-align:middle;" alt="Linkedin" title="View my Linkedin profile"></a>
+        <a style="display: inline-block; margin-top: 0px; vertical-align: middle; text-decoration: none" href="mailto:gffyles@gmail.com">gffyles@gmail.com<img src="Images/mail.png" style="height: 20px; margin-top:0; margin-left: 5px; vertical-align:middle;" alt=""></a>
+    </div>
+
+    <!-- The main content of the page -->
+    <main style="height: auto;">
+        <h2><u>DirectX 11 Showcase</u></h2>
+
+        <p>
+            This project showcases many techniques and features of the programmable pipeline using shaders in DX11 including <b>vertex manipulation,
+            lighting and soft shadows, post processing utilising the compute shader, advanced dynamic tessellation, use of the geometry shader</b> and more.
+        </p>
+            
+        <div style="text-align:center; margin-top:10px">
+            <a style="text-decoration:none" href="https://github.com/GeoFyl/DirectX-11-Showcase">View the code on <img src="Images/github.png" style="height: 30px; margin-top:0; vertical-align:middle;" alt="Github"></a>
+        </div>
+
+         <div style="text-align:center; margin-top:10px">
+            <a style="text-decoration:none" href="https://drive.google.com/file/d/1BXvuHGAV5RSPUc-RiCDKKCjMFpMyLhOS/view?usp=sharing">Download .exe at <img src="Images/googleDrive.png" style="height: 30px; margin-top:0; vertical-align:middle;" alt="Github"></a>
+        </div>
+
+        <p>
+            View the below video and its description for more details:
+        </p>
+
+        <iframe style="width: 100%; max-width:600px; margin: 10px auto; display:block" height="315" src="https://www.youtube.com/embed/gsu14rOSYqQ?si=j93qcSDwhtSv33Q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <p>
+            [0:00] Flyover of the scene. A mountain with a lake, and a tent orbited by a point light. There are also a user-controlled point light and spotlight.<br>
+            [0:09] The mountain is generated from a heightmap, which stores height values as a texture. The video demonstrates dynamically changing how the height value is scaled, increasing and decreasing the height of the mountain. The video then shows the water being simulated in real-time using four Gerstner waves (Catlike Coding, 2018), and how the user can set variables used in the calculations to affect the simulation.<br>
+            [0:45] The directional light is shown, with correct lighting and shadows, and how the user can manipulate the direction and colour. Diffuse intensity is the dot product of the light ray and the surface normal.<br>
+            [1:04] The point light is shown, with correct lighting and shadows, and how the user can manipulate the position, colour, and attenuation factors. Diffuse is calculated similarly to the directional light but with attenuation applied. We can see the water has correct specular highlights, calculated using the Blinn-Phong method. Point light shadows use six different shadow maps for each direction.<br>
+            [1:24] Manipulating the spotlight is shown. We also see correct lighting and shadows on and around the tent.<br>
+            [1:43] PCF filtering (Luna, 2012) is used to give shadows soft edges.<br>
+            [1:47] Shows changing the shadow bias.<br>
+            [1:49] Shows lighting and normal debugging.<br>
+            [1:56] Demonstrates viewing the various shadow maps. They are the depth buffers are rendered to a separate quad on the screen.<br>
+            [2:12] Demonstrates the bloom post processing and the effect of setting the variables. Done with a gaussian blur in the compute shader.<br>
+            [2:22] Screen area-based tessellation attempts to estimate the screen area taken up by each control patch and sets the factors accordingly. Tessellation is done using interlocking tiles algorithm (Zink, Pattineo and Hoxley, 2011).<br>
+            [2:36] Distance based tessellation uses the same interlocking tiles algorithm but sets factors based on distance to the camera.<br>
+            [2:53] Shows grass generated in the geometry shader (Roystan, 2018), with density controlled by tessellation.<br>
+        </p>
+
+
+    </main>
+
+    <!-- Page Footer -->
+    <footer>
+        Site designed and implemented by myself.
+    </footer>
+
+</body>
+</html>
