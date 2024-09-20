@@ -2,11 +2,11 @@
 * {margin:0; padding:0}
 
 /* Background Colours */
-nav, body {background-color: #1c1c1c;}
-footer, main, section, .contact { background-color: #333333;}
+body {background-color: #1c1c1c;}
+footer, main, .contact { background-color: #333333;}
 canvas{background-color: #ffffff;}
-.thumbnailDiv {
-    background-color: #4d4d4d
+.thumbnailDiv, .projectPageDiv, nav ul li a, #tutNav ul li, section {
+    background-color: #4d4d4d;
 }
 
 /* Text Properties */
@@ -17,33 +17,35 @@ p {margin-top: 10px;}
 /* Margins */
 body{margin:auto;}
 header{margin-bottom: 10px;}
-main, footer, .thumbnailDiv{margin-top: 10px;}
+main, footer {margin-top: 10px;}
 .subdiv{margin-right: 10px;}
 img {margin-top: 10px;}
 nav ul li a {margin-right: 2px;}
 .physicsNav {margin-right: 0px;}
-.thumbnailDiv {margin-bottom: -100%}
+.contact a {margin-right: 10px;}
 
 /* Padding */
 h1{padding-top: 10px; padding-bottom: 5px;}
-footer, section, .thumbnailDiv, .contact {
+footer, section, .thumbnailDiv, .contact, .projectPageDiv {
     padding: 10px;
 } 
 section{padding-top: 0px;}
 main {
     padding: 10px 50px 10px 50px;
 }
-.thumbnailDiv{padding-bottom:100%}
-.thumbnailContainer{padding-bottom:10px; overflow:hidden}
 
 /* Positioning (Float, Display and Clear) */
 h1{float: left;}
 main, header, nav, footer, section, .contact{clear: both}
 #PageTitle {display:inline;}
-.subdiv, #cursor, .thumbnailDiv {
+.subdiv, #cursor {
     display: inline-block;
 }
-.thumbnailDiv {vertical-align:top;}
+.thumbnailContainer {
+    display: grid;
+    grid-template-columns: auto auto auto; /* Creates 3 equal columns */
+    gap: 10px;
+}
 .physicsNav {display:block}
 
 /* Element Sizes */
@@ -57,14 +59,18 @@ header{ height: 50px;}
 canvas{width: 100%; height:100%;}
 input[type=number],input[type=button]{width: 50px;}
 select{width: 90px;}
-.thumbnailContainer{height:100%}
-.thumbnailDiv {
-    width: calc(33% - 30px)
-}
 .thumbnailImg {width: 100%;}
 .tutImgLong {width: 100%; max-width: 700px}
 .tutImg {width: 100%; max-width: 300px}
 .physicsNav {height:100%}
+
+/* Misc */
+.thumbnailDiv, main, .contact, footer, .projectPageDiv {
+    border-radius: 10px;
+}
+.thumbnailDiv, .projectPageDiv {
+    box-shadow: 3px 3px 3px #1c1c1c;
+}
 
 /* Navigation List Properties */
 #PageTitle {text-decoration: none;}
@@ -72,7 +78,6 @@ nav ul, #tutNav ul{ list-style-type: none;}
 nav ul li, #tutNav ul li{float: left; width: 33.333%; text-align: center;}
 #tutNav ul li{width: 25%;}
 nav ul li a, #tutNav ul li {
-    background-color: #333333;
     display: block;
     padding: 10px;
     height: 20px;
@@ -101,9 +106,13 @@ nav ul li a:hover, #tutNav ul li:hover, .thumbnailDiv:hover {
         padding: 10px 20px 10px 20px;
     }
     .thumbnailDiv {
-        width: calc(100% - 20px);
+       /* width: calc(100% - 20px);*/
         padding-bottom:10px;
         margin-bottom:0;
     }
-    .thumbnailContainer{padding-bottom:0}
+    .thumbnailContainer {
+        display: grid;
+        grid-template-columns: auto; /* Creates 3 equal columns */
+        gap: 10px;
+    }
 }
