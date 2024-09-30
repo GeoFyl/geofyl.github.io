@@ -10,7 +10,7 @@ canvas{background-color: #ffffff;}
 }
 
 /* Text Properties */
-h1, a, main, footer, section, .contact{font-family: Arial; color: #ffffff; font-family: 'Cascadia Code'}
+h1, a, main, footer, section, .contact{font-family: Arial; color: #ffffff; font-family: 'Source Code Pro'}
 footer{color: #828282}
 p {margin-top: 10px;}
 
