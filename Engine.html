@@ -34,24 +34,38 @@
         <div class="projectPageDiv">
             <h2><u>Game Engine</u></h2>
 
-            <p>
-                The Toffee Engine is a 3D game engine / framework. It isnt meant to be used to produce a real game, but is to show my understanding of the core concepts of game engine development. A demo application is included.
-            </p>
+            <div class="sideBySideDiv">
+                <div style="width:100%; padding-bottom: 10px;">
+                    <iframe style="width: 100%; min-height: 300px; margin-top: 10px; display: block" height="100%" src="https://www.youtube.com/embed/6Gd_Hp8wqjU?si=RKqGZenlWv98hUdY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
-            <div style="text-align:center; margin-top:10px">
-                <a style="text-decoration:none" href="https://github.com/GeoFyl/Game-Engine">View the code on <img src="Images/github.png" style="height: 25px; margin-top:0; vertical-align:middle;" alt="Github"></a>
+                <div>
+                    <p style="padding-right: 10px">
+                        The Toffee Engine is an entity component system based 3D game engine / framework built in C++. It isnt meant to be used to produce a real game, but is to show my understanding of the core concepts of game engine development. A demo application is included.
+                    </p>
+
+                    <div style="text-align:center; margin-top:10px">
+                        <a style="text-decoration:none" href="https://github.com/GeoFyl/Game-Engine">View the code on <img src="Images/github.png" style="height: 25px; margin-top:0; vertical-align:middle;" alt="Github"></a>
+                    </div>
+                    <div style="text-align:center; margin-top:10px">
+                        <a style="text-decoration:none" href="https://drive.google.com/file/d/1__3UN7V3EPE00y8SufDHegzVY-4ifyv9/view?usp=sharing">Download .exe at <img src="Images/googleDrive.png" style="height: 25px; margin-top:0; vertical-align:middle;" alt="Github"></a>
+                    </div>
+
+                    <p>Technologies used:</p>
+                    <ul style="margin-left:40px">
+                        <li>3D rendering with fixed-function OpenGL 1.1</li>
+                        <li>Real-time 3D physics simulation with Nvidia PhysX version 5.3.0.33308187</li>
+                        <li>Audio with SoLoud version 20200207</li>
+                        <li>
+                            Events and Window management with SDL version 2.28.1 . This is also how the OpenGL context is
+                            created.
+                        </li>
+                        <li>Entity component system with EnTT version 3.13.0 for managing game objects and scenes.</li>
+                        <li>Resource management uses Minizip version 1.1 and Boost version 1.84.0 </li>
+                    </ul>
+                </div>
+
             </div>
-            <div style="text-align:center; margin-top:10px">
-                <a style="text-decoration:none" href="https://drive.google.com/file/d/1__3UN7V3EPE00y8SufDHegzVY-4ifyv9/view?usp=sharing">Download .exe at <img src="Images/googleDrive.png" style="height: 25px; margin-top:0; vertical-align:middle;" alt="Github"></a>
-            </div>
-
-            <p>
-                View the demo application and the manual for details:
-            </p>
-
-            <iframe style="width: 100%; max-width:600px; margin: 10px auto; display:block" height="315" src="https://www.youtube.com/embed/6Gd_Hp8wqjU?si=RKqGZenlWv98hUdY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-            <!--<embed class="desktopVisible" src="Documents/Toffee_Manual.pdf" style="width: 100%; max-width:1000px; margin: 10px auto;" height="600" />-->
 
             <object data='Documents/Toffee_Manual.pdf' style="width: 100%; max-width:1000px; margin: 10px auto; display:block" height="600">
                 <p style="text-align:center">

@@ -33,9 +33,13 @@ section{padding-top: 0px;}
 main {
     padding: 10px 50px 10px 50px;
 }
+.sideBySideDiv p {padding-right: 10px;}
+
 
 /* Positioning (Float, Display and Clear) */
-h1{float: left;}
+h1 {
+    float: left;
+}
 main, header, nav, footer, section, .contact{clear: both}
 #PageTitle {display:inline;}
 .subdiv, #cursor {
@@ -44,6 +48,11 @@ main, header, nav, footer, section, .contact{clear: both}
 .thumbnailContainer {
     display: grid;
     grid-template-columns: auto auto auto; /* Creates 3 equal columns */
+    gap: 10px;
+}
+.sideBySideDiv {
+    display: grid;
+    grid-template-columns: 50% 50%; /* Creates 2 equal columns */
     gap: 10px;
 }
 .physicsNav {display:block}
@@ -110,9 +119,9 @@ nav ul li a:hover, #tutNav ul li:hover, .thumbnailDiv:hover {
         padding-bottom:10px;
         margin-bottom:0;
     }
-    .thumbnailContainer {
+    .thumbnailContainer, .sideBySideDiv {
         display: grid;
-        grid-template-columns: auto; /* Creates 3 equal columns */
+        grid-template-columns: auto;
         gap: 10px;
     }
 }
