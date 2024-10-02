@@ -47,7 +47,7 @@ main, header, nav, footer, section, .contact{clear: both}
 }
 .thumbnailContainer {
     display: grid;
-    grid-template-columns: auto auto auto; /* Creates 3 equal columns */
+    grid-template-columns: 33% 33% 33%; /* Creates 3 equal columns */
     gap: 10px;
 }
 .sideBySideDiv {

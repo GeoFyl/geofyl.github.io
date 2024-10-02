@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Title and scripts used to display the drag equation and show/hide tutorials-->
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Honours Project</title>
+    <link rel="icon" type="image/x-icon" href="Images/icon.ico">
+    <link rel="stylesheet" type="text/css" href="Scripts/Styles.css">
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/DisplayText.js" onload="PageReady();"></script>
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <header>
+        <h1><a href="/" id="PageTitle">George Fyles Portfolio....</a><span id="cursor">|</span></h1>
+    </header>
+
+    <!-- Contact Bar -->
+    <div class="contact">
+        <p style="display:inline-block; margin-top:0px; vertical-align:middle"><b>Contact:</b></p>
+        <a href="https://www.linkedin.com/in/george-fyles-b72b45200"><img src="Images/linkedin.png" style="height: 20px; margin-top:0; vertical-align:middle;" alt="Linkedin" title="View my Linkedin profile"></a>
+        <a href="https://github.com/GeoFyl"><img src="Images/github.png" style="height: 20px; margin-top:0; vertical-align:middle;" alt="GitHub" title="View my GitHub profile"></a>
+        <a style="display: inline-block; margin-top: 0px; vertical-align: middle; text-decoration: none" href="mailto:gffyles@gmail.com">gffyles@gmail.com<img src="Images/mail.png" style="height: 20px; margin-top:0; margin-left: 5px; vertical-align:middle;" alt=""></a>
+    </div>
+
+    <!-- The main content of the page -->
+    <main style="height: auto;">
+        <div class="projectPageDiv">
+            <h2><u>Rendering SDF Based SPH simulations</u></h2>
+
+            <div class="sideBySideDiv">
+                <div style="width:100%; padding-bottom: 10px;">
+                    <img style="width: 100%; min-height: 300px; margin-top: 10px; display: block" height="300px" src="Images/sph.jpg"></img>
+                </div>
+
+                <div>
+                    <p>
+                        My honours project and dissertation is currently planned to be focused on decreasing rendering latency of non-polygonal representations of particle-based fluid simulations.
+                        <br><br> Smoothed Particle Hydrodynamics (SPH) simulations work by discretising the volume of fluid into a set of particles to be simulated. A Signed Distance Field (SDF) representing this can then be created and rendered.
+                        My project will evaluate various acceleration structures and optimisations used for decreasing the rendering latency.
+                    </p>
+
+                    <!--<div style="text-align:center; margin-top:10px">
+                        <a style="text-decoration:none" href="https://github.com/GeoFyl/DirectX-11-Showcase">View the code on <img src="Images/github.png" style="height: 25px; margin-top:0; vertical-align:middle;" alt="Github"></a>
+                    </div>
+                    <div style="text-align:center; margin-top:10px">
+                        <a style="text-decoration:none" href="https://drive.google.com/file/d/1BXvuHGAV5RSPUc-RiCDKKCjMFpMyLhOS/view?usp=sharing">Download .exe at <img src="Images/googleDrive.png" style="height: 25px; margin-top:0; vertical-align:middle;" alt="Github"></a>
+                    </div>-->
+
+                </div>
+            </div>
+        </div>
+</main>
+
+    <!-- Page Footer -->
+    <footer>
+        Site designed and implemented by myself.
+    </footer>
+
+</body>
+</html>
