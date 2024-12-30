@@ -8,6 +8,9 @@ canvas{background-color: #ffffff;}
 .thumbnailDiv, .projectPageDiv, nav ul li a, #tutNav ul li, section {
     background-color: #4d4d4d;
 }
+#myCV:hover {
+    background-color: #808080;
+}
 
 /* Text Properties */
 h1, a, main, footer, section, .contact{font-family: Arial; color: #ffffff; font-family: 'Source Code Pro'}
@@ -55,6 +58,10 @@ main, header, nav, footer, section, .contact{clear: both}
     grid-template-columns: 50% 50%; /* Creates 2 equal columns */
     gap: 10px;
 }
+#AboutMe {
+    display: flex;
+}
+
 .physicsNav {display:block}
 
 /* Element Sizes */
@@ -91,7 +98,7 @@ nav ul li a, #tutNav ul li {
     padding: 10px;
     height: 20px;
 }
-nav ul li a:hover, #tutNav ul li:hover, .thumbnailDiv:hover {
+nav ul li a:hover, #tutNav ul li:hover, .thumbnailDiv:hover, #myCV {
     background-color: #616161;
     color: #ffffff;
 }
@@ -124,4 +131,6 @@ nav ul li a:hover, #tutNav ul li:hover, .thumbnailDiv:hover {
         grid-template-columns: auto;
         gap: 10px;
     }
+
+    #AboutMe {display:block}
 }
