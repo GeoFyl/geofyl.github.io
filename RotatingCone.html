@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+
+<!-- Title and scripts used to display the drag equation and show/hide tutorials-->
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rigid Body Dynamics</title>
+    <link rel="icon" type="image/x-icon" href="Images/icon.ico">
+    <link rel="stylesheet" type="text/css" href="Scripts/Styles.css">
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/DisplayText.js" onload="PageReady();"></script>
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <header>
+        <h1><a href="/" id="PageTitle">George Fyles Portfolio....</a><span id="cursor">|</span></h1>
+    </header>
+
+    <!-- Contact Bar -->
+    <div class="contact">
+        <p style="display:inline-block; margin-top:0px; vertical-align:middle"><b>Contact:</b></p>
+        <a href="https://www.linkedin.com/in/george-fyles-b72b45200"><img src="Images/linkedin.png" style="height: 20px; margin-top:0; vertical-align:middle;" alt="Linkedin" title="View my Linkedin profile"></a>
+        <a href="https://github.com/GeoFyl"><img src="Images/github.png" style="height: 20px; margin-top:0; vertical-align:middle;" alt="GitHub" title="View my GitHub profile"></a>
+        <a style="display: inline-block; margin-top: 0px; vertical-align: middle; text-decoration: none" href="mailto:gffyles@gmail.com">gffyles@gmail.com<img src="Images/mail.png" style="height: 20px; margin-top:0; margin-left: 5px; vertical-align:middle;" alt=""></a>
+    </div>
+
+    <!-- The main content of the page -->
+    <main style="height: auto;">
+        <div class="projectPageDiv">
+            <h2><u>Computation of Rigid Body Dynamics</u></h2>
+
+            <div class="sideBySideDiv">
+                <object data='Documents/RotatingCone.py' style="width: 100%; max-width:1000px; margin: 10px auto; display:block" height="99%"></object>
+
+                <div>
+                    <p>
+                        This program written in Python computes the angular velocity, centre of mass trajectory and general free motion of a rigid body in the form of a cone.
+                        The components and magnitude of angular velocity are computed using a 4th order Runge-Kutta algorithm. The vertical velocity and displacement of the centre of mass are computed using the semi-implicit Euler method.
+                        Finally the general motion is a combination of the two.
+
+                        <br><br>The simulation is set up for a solid circular cone of mass 5kg, radius 2m and height 6m. Initially, angular velocity ω = (1, 2, 3) rad/s.
+                        Rotation is about an axis through the centre of mass, and the cone is given an initial velocity of (0, 0, 200) m/s and constant acceleration (0, 0, −9.8) m/s.
+                        For general motion, the point with initial position (0, 3/4r, 0) is tracked.
+                        Plots produced from the simulation are shown (click to open in new tab):
+                    </p>
+
+                    <div class="thumbnailContainer" style="margin-top:10px; padding-right:25px">
+                        <a href="Images/Cone/Figure_1.png" target="_blank"><img src="Images/Cone/Figure_1.png" style="width:100%; margin: 0" /></a>
+                        <a href="Images/Cone/Figure_2.png" target="_blank"><img src="Images/Cone/Figure_2.png" style="width:100%; margin: 0" /></a>
+                        <a href="Images/Cone/Figure_3.png" target="_blank"><img src="Images/Cone/Figure_3.png" style="width:100%; margin: 0" /></a>
+                        <a href="Images/Cone/Figure_4.png" target="_blank"><img src="Images/Cone/Figure_4.png" style="width:100%; margin: 0" /></a>
+                        <a href="Images/Cone/Figure_5.png" target="_blank"><img src="Images/Cone/Figure_5.png" style="width:100%; margin: 0" /></a>
+                        <a href="Images/Cone/Figure_6.png" target="_blank"><img src="Images/Cone/Figure_6.png" style="width:100%; margin: 0" /></a>
+</div>
+                </div>
+        </div>
+</main>
+
+    <!-- Page Footer -->
+    <footer>
+        Site designed and implemented by myself.
+    </footer>
+
+</body>
+</html>
