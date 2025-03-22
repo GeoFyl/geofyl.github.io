@@ -79,6 +79,9 @@ select{width: 90px;}
 .tutImgLong {width: 100%; max-width: 700px}
 .tutImg {width: 100%; max-width: 300px}
 .physicsNav {height:100%}
+.sideBySideDiv pre {
+    height: 640px;
+}
 
 /* Misc */
 .thumbnailDiv, main, .contact, footer, .projectPageDiv {
@@ -131,6 +134,8 @@ nav ul li a:hover, #tutNav ul li:hover, .thumbnailDiv:hover, #myCV {
         grid-template-columns: auto;
         gap: 10px;
     }
+
+    .sideBySideDiv pre {height: 500px;}
 
     #AboutMe {display:block}
 }
