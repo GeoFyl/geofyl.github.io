@@ -36,28 +36,59 @@
 
             <div class="sideBySideDiv">
                 <div style="width:100%; padding-bottom: 10px;">
-                    <iframe style="width: 100%; min-height: 300px; margin-top: 10px; display: block" height="100%" src="https://www.youtube.com/embed/8W0aL1ldSsE?si=PFEIxzJNirIgP-x7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe style="width: 100%; min-height: 300px; margin-top: 10px; display: block" height="50%" src="https://www.youtube.com/embed/8W0aL1ldSsE?si=PFEIxzJNirIgP-x7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe style="width: 100%; min-height: 300px; margin-top: 10px; display: block" height="50%" src="https://www.youtube.com/embed/i5dsWreBgwA?si=VxesCcUJwE5-meAO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
 
                 <div>
-                    <p>
-                        My honours project aims to evaluate the effectiveness of a combination of
-                        novel methods for decreasing the latency of reconstructing and
-                        rendering surfaces of SDF representations of SPH simulations.
-                        <br>See the video and my submitted proposal below for details.
-                        <br><br>
-                    </p>
-
                     <div style="text-align:center; margin-top:10px">
                         <a style="text-decoration:none" href="https://github.com/GeoFyl/Honours-Project">View the code on <img src="Images/github.png" style="height: 25px; margin-top:0; vertical-align:middle;" alt="Github"></a>
-                        <p style="margin:auto; margin-top:0; width:80%; color:red">
-                            NOTE: Work in progress - no guarantee anything currently works.
-                        </p>
                     </div>
-                </div>
 
+                    <p>
+                        Particle-based fluid simulation methods allow for unparalleled realism in the behaviours of fluids such as water in video games.
+                        They offer no inherent way of tracking surface geometry, however, thus various techniques for reconstructing and rendering the fluid surface have been investigated.
+                        One such method is to directly sphere trace the isosurface extracted from a signed distance field (SDF) representing the fluid body without the use of an intermediary
+                        mesh, and various techniques have been proposed to reduce the computational costs involved.
+
+                        <br><br>This study aims to design and implement a pipeline for the non-polygonal rendering of particle-based fluid simulations,
+                        incorporating several novel techniques, and to evaluate its effectiveness at reducing rendering
+                        latency and memory consumption when compared to less advanced methods.
+
+                        <br><br>An application was developed in C++ with Direct3D 12 and DirectX Raytracing. A novel narrow band technique, an optimised nearest neighbour search (NNS) and the construction of a
+                        sparse brick set (SBS) data structure were combined into a unified pipeline for achieving the abovementioned rendering technique.
+                        Two additional pipelines were implemented utilising simpler and completely naïve methods, to compare the complex pipeline against.
+
+                        <br><br>The Naïve pipeline re-evaluates the SDF at every sphere tracing step, combining the distances to all particles in the simulation.
+                        The Simple pipeline precomputes the SDF and stores it in a dense 3D texture representing the whole world space.
+                        The Complex pipeline uses the previously mentioned narrow band, NNS and SBS methods to drastically reduce computational costs.
+
+                        <br><br>The videos to the side show the final application and an early prototype. I'm still writing my dissertation but the proposal is below.
+                        <br>Below are the most exciting results:
+                    </p>
+                </div>
             </div>
 
+            <div class="thumbnailContainer" style="margin-top:20px; padding-right:25px">
+                <a href="Images/HonoursResults/FPS.png" target="_blank"><img src="Images/HonoursResults/FPS.png" style="width:100%; height:100%; margin: 0" /></a>
+                <a href="Images/HonoursResults/FrameTimeAll.png" target="_blank"><img src="Images/HonoursResults/FrameTimeAll.png" style="width: 100%; height: 100%; margin: 0" /></a>
+                <a href="Images/HonoursResults/FrameTimeComplex.png" target="_blank"><img src="Images/HonoursResults/FrameTimeComplex.png" style="width: 100%; height: 100%; margin: 0" /></a>
+            </div>
+            <p>
+                Looking at the average FPS for a simulation of 10648 particles, inferred from measured GPU frame times, using the different pipelines. The complex pipeline offers a speedup of almost 6000% over the naïve method!
+                The frame times in milliseconds are also shown with power trendlines plotted for the different pipelines as the number of particles increases.
+                The Na ve and Simple pipelines show linear increase in frame time, while my Complex pipeline shows a logarithmic increase!
+                <br><br>
+                Similarly, through the efficient SBS data structure for storing SDF data, memory usage is reduced compared to the Simple pipeline, increasing logarithmically. Through efficient ordering of particle data and the NNS algorithm,
+                cache hit rate is increased during SDF evaluation!
+            </p>
+            <div class="thumbnailContainer" style="margin: auto; margin-top: 10px; padding-right: 25px; grid-template-columns: 33% 33%; align-items: center; justify-content: center; ">
+                <a href="Images/HonoursResults/Memory.png" target="_blank"><img src="Images/HonoursResults/Memory.png" style="width:100%; height:100%; margin: 0" /></a>
+                <a href="Images/HonoursResults/CacheHits.png" target="_blank"><img src="Images/HonoursResults/CacheHits.png" style="width: 100%; height: 100%; margin: 0" /></a>
+            </div>
+
+
+            <p style="text-align:center"><u>Original Proposal:</u></p>
             <object data='Documents/Proposal.pdf' style="width: 100%; max-width:1000px; margin: 10px auto; display:block" height="600">
                 <p style="text-align:center">
                     If you don't see the PDF preview, <a href="https://geofyl.github.io/Documents/Proposal.pdf">view it here.</a>

@@ -7,9 +7,11 @@ footer, main, .contact { background-color: #333333;}
 canvas{background-color: #ffffff;}
 .thumbnailDiv, .projectPageDiv, nav ul li a, #tutNav ul li, section {
     background-color: #4d4d4d;
+    transition: 0.2s;
 }
 #myCV:hover {
     background-color: #808080;
+    transition: 0.2s
 }
 
 /* Text Properties */
