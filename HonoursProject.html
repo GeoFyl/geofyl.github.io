@@ -3,15 +3,38 @@
 
 <!-- Title and scripts used to display the drag equation and show/hide tutorials-->
 <head>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Honours Project</title>
     <link rel="icon" type="image/x-icon" href="Images/icon.ico">
     <link rel="stylesheet" type="text/css" href="Scripts/Styles.css">
     <script src="Scripts/jquery-1.10.2.min.js"></script>
     <script src="Scripts/DisplayText.js" onload="PageReady();"></script>
+    <script>
+        function ShowProposal() {
+            document.getElementById("Proposal").style.display = "block";
+            document.getElementById("ProposalDiv").onclick = function() { HideProposal(); };
+            document.getElementById("ProposalArrow").style.transform = "rotate(90deg)";
+        } 
+        function HideProposal() {
+            document.getElementById("Proposal").style.display = "none";
+            document.getElementById("ProposalDiv").onclick = function() { ShowProposal(); };
+            document.getElementById("ProposalArrow").style.transform = "rotate(0deg)";
+        } 
+        function ShowDiss() {
+            document.getElementById("Diss").style.display = "block";
+            document.getElementById("DissDiv").onclick = function() { HideDiss(); };
+            document.getElementById("DissArrow").style.transform = "rotate(90deg)";
+        } 
+        function HideDiss() {
+            document.getElementById("Diss").style.display = "none";
+            document.getElementById("DissDiv").onclick = function() { ShowDiss(); };
+            document.getElementById("DissArrow").style.transform = "rotate(0deg)";
+        } 
+
+    </script>
 </head>
 
 <body>
@@ -63,7 +86,7 @@
                         The Simple pipeline precomputes the SDF and stores it in a dense 3D texture representing the whole world space.
                         The Complex pipeline uses the previously mentioned narrow band, NNS and SBS methods to drastically reduce computational costs.
 
-                        <br><br>The videos to the side show the final application and an early prototype. I'm still writing my dissertation but the proposal is below.
+                        <br><br>The videos to the side show the final application and an early prototype. Find below my dissertation and the original proposal.
                         <br>Below are the most exciting results:
                     </p>
                 </div>
@@ -88,13 +111,29 @@
             </div>
 
 
-            <p style="text-align:center"><u>Original Proposal:</u></p>
-            <object data='Documents/Proposal.pdf' style="width: 100%; max-width:1000px; margin: 10px auto; display:block" height="600">
-                <p style="text-align:center">
-                    If you don't see the PDF preview, <a href="https://geofyl.github.io/Documents/Proposal.pdf">view it here.</a>
-                </p>
-                <iframe src="https://docs.google.com/gview?url=https://geofyl.github.io/Documents/Proposal.pdf&embedded=true" style="width: 100%; max-width: 1000px; margin: 10px auto; height:600px; display:block" frameborder="0"></iframe>
-            </object>
+            <div id="DissDiv" class="projectPageDiv button" style="margin-top:10px" onclick="ShowDiss()">
+                <img id="DissArrow" src="Images/dropDownArrow.png" style="height: 25px; margin-top:0; vertical-align:middle;">
+                Dissertation
+
+                <object id="Diss" data='Documents/G_Fyles_Dissertation.pdf' style="width: 100%;  margin: 10px auto; display:none" height="600">
+                    <p style="text-align:center">
+                        If you don't see the PDF preview, <a href="https://geofyl.github.io/Documents/G_Fyles_Dissertation.pdf">view it here.</a>
+                    </p>
+                    <iframe src="https://docs.google.com/gview?url=https://geofyl.github.io/Documents/G_Fyles_Dissertation.pdf&embedded=true" style="width: 100%; max-width: 1000px; margin: 10px auto; height:600px; display:block" frameborder="0"></iframe>
+                </object>
+            </div>
+
+            <div id="ProposalDiv" class="projectPageDiv button" style="margin-top:10px" onclick="ShowProposal()">
+                <img id="ProposalArrow" src="Images/dropDownArrow.png" style="height: 25px; margin-top:0; vertical-align:middle;">
+                Original Proposal
+
+                <object id="Proposal" data='Documents/Proposal.pdf' style="width: 100%;  margin: 10px auto; display:none" height="600">
+                    <p style="text-align:center">
+                        If you don't see the PDF preview, <a href="https://geofyl.github.io/Documents/Proposal.pdf">view it here.</a>
+                    </p>
+                    <iframe src="https://docs.google.com/gview?url=https://geofyl.github.io/Documents/Proposal.pdf&embedded=true" style="width: 100%; max-width: 1000px; margin: 10px auto; height:600px; display:block" frameborder="0"></iframe>
+                </object>
+            </div>
 </main>
 
     <!-- Page Footer -->

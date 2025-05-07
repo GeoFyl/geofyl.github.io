@@ -9,9 +9,10 @@ canvas{background-color: #ffffff;}
     background-color: #4d4d4d;
     transition: 0.2s;
 }
-#myCV:hover {
+.button:hover {
     background-color: #808080;
-    transition: 0.2s
+    transition: 0.2s;
+    cursor: pointer;
 }
 
 /* Text Properties */
@@ -103,7 +104,7 @@ nav ul li a, #tutNav ul li {
     padding: 10px;
     height: 20px;
 }
-nav ul li a:hover, #tutNav ul li:hover, .thumbnailDiv:hover, #myCV {
+nav ul li a:hover, #tutNav ul li:hover, .thumbnailDiv:hover, .button {
     background-color: #616161;
     color: #ffffff;
 }
