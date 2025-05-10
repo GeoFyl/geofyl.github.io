@@ -69,10 +69,13 @@
                     </div>
 
                     <p>
-                        Particle-based fluid simulation methods allow for unparalleled realism in the behaviours of fluids such as water in video games.
-                        They offer no inherent way of tracking surface geometry, however, thus various techniques for reconstructing and rendering the fluid surface have been investigated.
-                        One such method is to directly sphere trace the isosurface extracted from a signed distance field (SDF) representing the fluid body without the use of an intermediary
-                        mesh, and various techniques have been proposed to reduce the computational costs involved.
+                        Particle-based fluid simulations allow for unparalleled realism fluids like water in video games. They work by breaking the fluid down into individual particles.
+                        There is no inherent way of tracking surface geometry, however, thus various techniques for reconstructing and rendering the fluid surface have been investigated.
+                        One way is to directly sphere trace the isosurface extracted from a signed distance field (SDF) representing the fluid body without the use of an intermediary
+                        mesh, and various techniques have been proposed that can reduce the computational and memory costs involved.
+
+                        <img src="Images/Honours/intro.png" style="width:100%">
+
 
                         <br><br>This study aims to design and implement a pipeline for the non-polygonal rendering of particle-based fluid simulations,
                         incorporating several novel techniques, and to evaluate its effectiveness at reducing rendering
@@ -92,10 +95,10 @@
                 </div>
             </div>
 
-            <div class="thumbnailContainer" style="margin-top:20px; padding-right:25px">
-                <a href="Images/HonoursResults/FPS.png" target="_blank"><img src="Images/HonoursResults/FPS.png" style="width:100%; height:100%; margin: 0" /></a>
-                <a href="Images/HonoursResults/FrameTimeAll.png" target="_blank"><img src="Images/HonoursResults/FrameTimeAll.png" style="width: 100%; height: 100%; margin: 0" /></a>
-                <a href="Images/HonoursResults/FrameTimeComplex.png" target="_blank"><img src="Images/HonoursResults/FrameTimeComplex.png" style="width: 100%; height: 100%; margin: 0" /></a>
+            <div class="thumbnailContainer" style="margin-top:20px; padding-right:5px">
+                <a href="Images/Honours/FPS.png" target="_blank"><img src="Images/Honours/FPS.png" style="width:100%; height:100%; margin: 0" /></a>
+                <a href="Images/Honours/FrameTimeAll.png" target="_blank"><img src="Images/Honours/FrameTimeAll.png" style="width: 100%; height: 100%; margin: 0" /></a>
+                <a href="Images/Honours/FrameTimeComplex.png" target="_blank"><img src="Images/Honours/FrameTimeComplex.png" style="width: 100%; height: 100%; margin: 0" /></a>
             </div>
             <p>
                 Looking at the average FPS for a simulation of 10648 particles, inferred from measured GPU frame times, using the different pipelines. The complex pipeline offers a speedup of almost 6000% over the naïve method!
@@ -105,9 +108,9 @@
                 Similarly, through the efficient SBS data structure for storing SDF data, memory usage is reduced compared to the Simple pipeline, increasing logarithmically. Through efficient ordering of particle data and the NNS algorithm,
                 cache hit rate is increased during SDF evaluation!
             </p>
-            <div class="thumbnailContainer" style="margin: auto; margin-top: 10px; padding-right: 25px; grid-template-columns: 33% 33%; align-items: center; justify-content: center; ">
-                <a href="Images/HonoursResults/Memory.png" target="_blank"><img src="Images/HonoursResults/Memory.png" style="width:100%; height:100%; margin: 0" /></a>
-                <a href="Images/HonoursResults/CacheHits.png" target="_blank"><img src="Images/HonoursResults/CacheHits.png" style="width: 100%; height: 100%; margin: 0" /></a>
+            <div class="centeredTwoDiv">
+                <a href="Images/Honours/Memory.png" target="_blank"><img src="Images/Honours/Memory.png" style="width:100%; height:100%; margin: 0" /></a>
+                <a href="Images/Honours/CacheHits.png" target="_blank"><img src="Images/Honours/CacheHits.png" style="width: 100%; height: 100%; margin: 0" /></a>
             </div>
 
 

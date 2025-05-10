@@ -61,6 +61,14 @@ main, header, nav, footer, section, .contact{clear: both}
     grid-template-columns: 50% 50%; /* Creates 2 equal columns */
     gap: 10px;
 }
+.centeredTwoDiv {
+    display: grid;
+    grid-template-columns: 33% 33%;
+    gap: 10px;
+    margin: auto;
+    margin-top: 10px;
+    justify-content: center;
+}
 #AboutMe {
     display: flex;
 }
@@ -132,7 +140,7 @@ nav ul li a:hover, #tutNav ul li:hover, .thumbnailDiv:hover, .button {
         padding-bottom:10px;
         margin-bottom:0;
     }
-    .thumbnailContainer, .sideBySideDiv {
+    .thumbnailContainer, .sideBySideDiv, .centeredTwoDiv {
         display: grid;
         grid-template-columns: auto;
         gap: 10px;
