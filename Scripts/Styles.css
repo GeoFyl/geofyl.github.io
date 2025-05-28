@@ -93,6 +93,11 @@ select{width: 90px;}
     height: 640px;
 }
 .awardLogo {height: 80px}
+.centredImg {
+    width: 50%;
+    margin: auto;
+    display: block;
+}
 
 /* Misc */
 .thumbnailDiv, main, .contact, footer, .projectPageDiv {
@@ -150,6 +155,12 @@ nav ul li a:hover, #tutNav ul li:hover, .thumbnailDiv:hover, .button {
 
     .awardLogo {
         height: 50px
+    }
+
+    .centredImg {
+        width: 100%;
+        margin: auto;
+        display: block;
     }
 
     #AboutMe {display:block}
